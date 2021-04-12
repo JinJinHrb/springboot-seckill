@@ -75,8 +75,9 @@ public class UserService {
         if(StringUtils.isEmpty(formPass)){
             return false;
         }
-        List<User> users = getByNickname(loginVo.getNickname());
-        User user = users == null ? null : users.get(0);
+//        List<User> users = getByNickname(loginVo.getNickname());
+        User user = getById(Long.valueOf(loginVo.getMobile()));
+//        User user = users == null ? null : users.get(0);
         if(user == null){
             return false;
         }
